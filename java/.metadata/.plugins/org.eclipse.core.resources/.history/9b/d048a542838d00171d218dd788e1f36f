@@ -1,0 +1,9 @@
+
+public class FileReader {
+
+	
+public void read(String file){
+	
+}
+	
+}

@@ -1,0 +1,34 @@
+package polymorphism;
+
+import java.util.Scanner;
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scanner = new Scanner(System.in);
+		String str;
+		while (true) {
+			System.out.println("What kind of animal>\n" + "1. Mammal\n" + "2. Reptile\n");
+			str = scanner.next();
+
+			while (!isAnInt(str) && Integer.parseInt(str) > 2 && Integer.parseInt(str) < 1) {
+					System.out.println("Invalid response\n");
+					System.out.println("What kind of animal>\n" + "1. Mammal\n" + "2. Reptile\n");
+					str = scanner.next();
+			}
+		}
+
+	}
+
+	public static boolean isAnInt(String str) {
+
+		try {
+			Integer.parseInt(str);
+			return true;
+		} catch (NumberFormatException e) {
+			return false;
+		}
+	}
+
+}

@@ -1,0 +1,25 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			Scanner scanner = new Scanner(System.in);
+			
+			String str;
+			int input;
+			while(true){
+				System.out.println("What kind of collection would you like?");
+				str = scanner.next();
+				input = Integer.parseInt(str);
+				
+				switch(input){
+				case 1:
+					ArrayList<CollectableObject> al;
+					break;
+				}
+			}
+	}
+
+}

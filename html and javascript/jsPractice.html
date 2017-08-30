@@ -1,0 +1,118 @@
+<html>
+<head>
+<script type="text/javascript">
+function person(name, age){
+		this.name=name;
+		this.age = age;
+	}
+	
+	var montrel = new person("Montrel McCall", 25);
+	var hermana = new person("Shanel Sosa", 28);
+	
+	rp = {name:"Random Person", type:"comic cartoon"}
+	
+	function someObject(name, whatever){
+		this.name = name;
+		this.whatever = whatever;
+		this.someCalculation = innerFunction;
+	}
+	
+	//innerfunctions take parameters from whatever object is used
+	function innerFunction(){
+	var innerNumber = 100 - this.whatever;
+	return innerNumber;
+	}
+	</script>
+</head>
+<body>
+
+<script type="text/javascript">
+<!-- older browers will think this is a comment
+	document.write("Hello, world!");
+
+	var someNum = 42;
+	var someString = "whatever"
+	var someBoolean = true;
+	var someNull = null;
+	document.write(someNum + someString);
+	
+	//functions can be called in javascript as well as html
+	function someFunction(){
+		alert("Hi Montrel, this is the alert screen.");
+	}
+	function someOtherFunction(x){
+	alert("Some other function was activated when you used" + x );
+	}
+	
+	document.write(montrel.age);
+	
+	document.write(rp.name + "is a " +rp.type);
+	
+//-->
+
+var anArray = new Array("Montrel", "Lashon", "McCall");
+var theSameArray = new Array(3); //arrays do not need to be initialized like they do in java
+theSameArray[0] = "Montrel";
+theSameArray[1] = "Lashon";
+theSameArray[2] = "McCall";
+
+document.write(" " + anArray[1]);
+
+var avatar = new Array("Water" , "Earth" , "Fire" ,"Air", "Lightning");
+avatar.pop();
+var Aang = avatar.join(" - ");
+
+var bodyparts = new Array("head", "shoulders", "knees" , "toes");
+
+bodyparts.reverse();
+bodyparts.push("eyes", "ears", "mouth", "nose");
+document.write(Aang);
+bodyparts.push();
+document.write(bodyparts);
+bodyparts.sort();
+document.write(bodyparts);
+
+var pie = prompt("Enter your name:","");
+document.write("Sup, " + pie);
+
+var info = new Array();
+info["color"] = "blue";
+info["age"] = 34;
+
+</script>
+
+
+
+<form>
+<input type="button" value="click here" onclick="someFunction()"/>
+<input type="button" id=" the second button" value="click here too" onclick="someOtherFunction(id)"/>
+</form>
+
+<form>
+<input type="button" value = "click here please" onClick="alert('You clicked a button'); alert('Did you know you could do two functions?')"/>
+
+<a href="https://www.youtube.com/channel/UC0dvS-ghN9l7ZTCIgKFIRLw" onMouseOver="alert('carefule, this goes to youtube')">Hover over me</a>
+<!--<div onMouseOut="alert('hey, come back')">Don't leave me</div>-->
+
+<script type="text/javascript">
+document.write( "Square root of 25 is " + Math.sqrt(25) + "<br/>");
+document.write("The month is " + new Date().getMonth());
+
+//setInterval("document.write('10 secs have passed')",10000);
+</script>
+
+</form>
+
+<form name = "formPractice">
+Username: <input type="text"/>
+Password:<input type = "password"/>
+<input type="submit" value="Submit!"/>
+</form>
+
+<script type="text/javascript">
+var x = document.formPractice.length;
+document.write("The length is" +  x +". Also, the password is "+ formPractice.password);
+</script>
+
+</body>
+</html>

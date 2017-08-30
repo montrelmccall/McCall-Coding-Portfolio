@@ -1,0 +1,28 @@
+package polymorphism;
+
+public class Snake extends Reptile{
+
+	@Override
+	public void communicate(){
+		System.out.println("Meow");
+	}
+	
+	@Override
+	public void eat(){
+		System.out.println("Nom Nom Nom");
+	}
+	
+	@Override
+	public void move(){
+		System.out.println("Four paws");
+	}
+	
+	@Override
+	public void typeOfScales(){
+		System.out.println("Fur all over body");
+	}
+	
+	
+	
+
+}

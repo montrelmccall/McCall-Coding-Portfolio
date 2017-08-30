@@ -1,0 +1,25 @@
+package polymorphism;
+
+public class Crocadile {
+	
+	@Override
+	public void communicate(){
+		System.out.println("I don't talk");
+	}
+	
+	@Override
+	public void eat(){
+		System.out.println("Fangs to the face");
+	}
+	
+	@Override
+	public void move(){
+		System.out.println("Slither");
+	}
+	
+	@Override
+	public void typeOfScales(){
+		System.out.println("Slick and smooth");
+	}
+
+}

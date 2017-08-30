@@ -1,0 +1,54 @@
+<html>
+<head>
+<style type="text/css">
+body{background-image:url("images\\ThePocket2000X2000.jpg");
+background-position:50% 50%;
+background-size: cover}
+.pocketImages{width:150};
+</style>
+
+<!--Script to change image sizes-->
+<script type="text/javascript">
+
+var currentImage = document.createElement("img");
+
+function largify(imageSrc){
+var imageListNode = document.getElementById("imagesFieldSet");
+imageListNode.position = 
+//document.write(currentImage.src);
+if(currentImage.src != ""){
+imagesForm.removeChild(currentImage)
+}
+currentImage.src = imageSrc;
+
+imagesForm.insertBefore(currentImage,imageListNode);
+}
+</script>
+
+</head>
+<body>
+<div id="header">
+<center>
+<img src="images\\2017TwitterBanner.png" width =100%/>
+<form name = "imagesForm">
+<fieldset id ="imagesFieldSet" name = "images">
+<table id="imageTable" border ="5" bordercolor="green">
+<tr>
+<th><h1>RP</h1></th>
+<th><h1>Ellipsis</h1></th>
+</tr>
+<tr>
+<td><img src="images\\Liquify Meets RP.png" class="pocketImages" onclick="largify(src)"/></td>
+<td><img src="images\\ellisisHappyPlace.png" class="pocketImages" onclick="largify(src)"/></td>
+</tr>
+<tr>
+<td><img src="images\\RP laughing.png" class="pocketImages" onclick="largify(src)"/></td>
+<td><img src="images\\ellipsis Chibi.png" class="pocketImages" onclick="largify(src)"/></td>
+</tr>
+</table>
+</fieldSet>
+</form>
+</center>
+</div>
+</body>
+</html>

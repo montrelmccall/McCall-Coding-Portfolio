@@ -1,0 +1,21 @@
+import java.util.concurrent.locks.ReentrantLock;
+public class syncCode {
+	
+	
+	private static int count;
+	
+	public void count(){
+		
+		while(count < 1000){
+			{
+				
+			}
+		}
+		
+	}
+	
+	public synchronized void increase(){
+		count++;
+	}
+
+}

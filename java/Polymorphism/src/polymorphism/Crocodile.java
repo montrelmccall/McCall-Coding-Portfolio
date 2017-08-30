@@ -1,0 +1,25 @@
+package polymorphism;
+
+public class Crocodile extends Reptile{
+	
+	@Override
+	public void communicate(){
+		System.out.println("I don't talk");
+	}
+	
+	@Override
+	public void eat(){
+		System.out.println("Powerful jaw");
+	}
+	
+	@Override
+	public void move(){
+		System.out.println("Belly-dragger");
+	}
+	
+	@Override
+	public void typeOfScales(){
+		System.out.println("Rough and tough");
+	}
+
+}

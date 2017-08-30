@@ -1,0 +1,5 @@
+package polymorphism;
+
+public abstract class mammal implements animal {
+
+}

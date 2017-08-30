@@ -1,0 +1,69 @@
+<html>
+<head>
+
+<script type ="text/javascript">
+
+var chatSubstance = new Array(10);
+var chatPosition = 0;
+ function addToChat(){
+	chatSubstance[chatPosition] = chatForm.chatText.value;
+	chatForm.chatText.value = "";
+	updateChat();
+ }
+ 
+ function updateChat(){
+	 chatForm.chatHistory.value="";
+	for(var i = chatPosition, j = 0; j < chatSubstance.length; j++, i--){
+	if(i < 0){
+		i = chatSubstance.length - 1;
+	}
+	if(chatSubstance[i] != undefined){
+	chatForm.chatHistory.value += chatSubstance[i] + "\n";
+	}
+	}
+	chatPosition++;
+	if(chatPosition >= chatSubstance.length){
+	chatPosition = 0;
+	}
+	
+ }
+</script>
+
+<style type="text/css">
+body{background-image:url("images\\ThePocket2000X2000.jpg");
+background-position:50% 50%;
+background-size: cover}
+</style>
+</head>
+<body>
+<div id="header">
+<center>
+<img src="images\\2017TwitterBanner.png" width =100%/>
+</center>
+</div>
+<form name ="chatForm">
+
+<textarea name="chatText" placeholder="Yo dawg, type something here" rows="1" cols="100">
+</textarea>
+<br/>
+
+<input type="button" name="chatButton" value = "Submit" onclick="addToChat()"/>
+
+
+<textarea name="chatHistory" style=" background-color:powderblue; margin-left:auto; margin-right:auto; width:100%; height: 125px; overflow-y: scroll;">
+
+        
+
+</textarea>
+
+<!--<textarea name="chatSubs" id="desc" style="float:left;color: #666666; width:700px; font-family: Candara,Trebuchet MS,sans-serif; font-size: 12px; font-weight: bold; border-right: thin dotted #666666; line-height: 18px;">
+
+          
+
+        </textarea>-->
+</form>
+
+
+</body>
+
+</html>

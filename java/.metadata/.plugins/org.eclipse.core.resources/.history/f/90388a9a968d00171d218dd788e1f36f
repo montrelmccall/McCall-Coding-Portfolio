@@ -1,0 +1,16 @@
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			myThread first = new myThread();
+			first.setName("first");
+			myThread second = new myThread();
+			second.setName("second");
+			myThread third = new myThread();
+			third.setName("third");
+			first.start();
+			
+	}
+
+}

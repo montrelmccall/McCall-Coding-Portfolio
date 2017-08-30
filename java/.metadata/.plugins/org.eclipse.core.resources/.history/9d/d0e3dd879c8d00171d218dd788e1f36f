@@ -1,0 +1,34 @@
+import java.util.Enumeration;
+
+public class CollectableObject implements Enumeration {
+
+	private int id;
+	private String name;
+	private static int count;
+
+	public CollectableObject() {
+
+		id = count++;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	@Override
+	public boolean hasMoreElements() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Object nextElement() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

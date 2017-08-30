@@ -1,0 +1,12 @@
+package polymorphism;
+
+public interface animal {
+
+	
+	public default void communicate(){}
+	
+	public default void eat(){}
+	
+	public default void move(){}
+	
+}

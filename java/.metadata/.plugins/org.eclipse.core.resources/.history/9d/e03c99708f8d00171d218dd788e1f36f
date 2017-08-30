@@ -1,0 +1,13 @@
+
+public class CollectableObject implements {
+	
+	private int id;
+	private static int count; 
+	
+	public CollectableObject(){
+		
+		id = count++;
+	}
+	
+
+}

@@ -1,0 +1,17 @@
+
+public class syncCode {
+	
+	
+	private static int count;
+	
+	public void count(){
+		
+		while(count < 1000){
+			synchronized{
+				
+			}
+		}
+		
+	}
+
+}

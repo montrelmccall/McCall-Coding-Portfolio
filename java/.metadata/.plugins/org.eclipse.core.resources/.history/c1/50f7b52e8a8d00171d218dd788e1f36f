@@ -1,0 +1,84 @@
+package polymorphism;
+
+import java.util.Scanner;
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scanner = new Scanner(System.in);
+		String str;
+		int choice;
+		while (true) {
+			System.out.println("What kind of animal>\n" + "1. Mammal\n" + "2. Reptile");
+			str = scanner.next();
+
+			while (!checkResponse(str)) {
+					str = scanner.next();
+			}
+			
+			choice = Integer.parseInt(str);
+			Animal animal;
+			System.out.print("What kind of ");
+			switch(choice){
+			
+			case 1:
+				System.out.println("mammal would you like?\n" + "1. Human\n" + "2.Cat");
+				str = scanner.next();
+				while(!checkResponse(str)){
+					str = scanner.next();
+				}
+				choice = Integer.parseInt(str);
+				switch (choice){
+				case 1:
+					animal = new Human();
+					break;
+				case 2:
+					animal = new Cat();
+					break;
+				}
+				break;
+			case 2:
+				System.out.println("reptile would you like?\n" + "1. Snake\n" + "2.Crocodile");
+				str = scanner.next();
+				while(!checkResponse(str)){
+					str = scanner.next();
+				}
+				choice = Integer.parseInt(str);
+				switch (choice){
+				case 1:
+					animal = new Human();
+					break;
+				case 2:
+					animal = new Cat();
+					break;
+				}
+				break;
+			}
+		}
+
+	}
+	
+	public static boolean checkResponse(String str){
+		
+		boolean response = !isAnInt(str) && Integer.parseInt(str) > 2 && Integer.parseInt(str) < 1;
+		
+		if(!response){
+			System.out.println("Invalid response\n");
+			System.out.println("What kind of animal>\n" + "1. Mammal\n" + "2. Reptile\n");
+		}
+		
+		return response;
+	}
+
+	public static boolean isAnInt(String str) {
+
+		try {
+			Integer.parseInt(str);
+			return true;
+		} catch (NumberFormatException e) {
+			return false;
+		}
+	}
+
+}
